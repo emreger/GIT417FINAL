@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Final</title>
+      <link href="style.css" rel="stylesheet">
+      <script src="script.js" defer></script>
+   </head>
+   <body>
+      <header>
+         <h1>Emily's Photography</h1>
+         <nav>
+            <ul>
+               <li><a href="#about">about</a></li>
+               <li><a href="#gallery">gallery</a></li>
+               <li><a href="#contact">contact</a></li>
+               <li><a href="#game">game</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <section id="about">
+            
+            <button id="darkmode">Toggle dark mode</button>
+            
+            <h2>All about Emily?</h2>
+            <section class="grid2">
+               <div>
+                  <p>Hello! My name is Emily. I love to take pictures. I am currently starting my career in photography and I am looking for prospectice clients.
+                     Please contact me below if you like my work.
+                  </p>
+                  <p>Some things I like to incorporate in my pictures.</p>
+                  <ul>
+                     <li>Nature</li>
+                     <li>Pictures at night</li>
+                     <li>High Color Contrast</li>
+                  </ul>
+                  <div class="gridsub">
+                     <img src="imgs/spike.jpg">
+                     <img src="imgs/sunset_kitty.jpg">
+                  </div>
+               </div>
+               <div><img class="reg" src="imgs/me.jpg" alt="a picture of me"></div>
+            </section>
+         </section>
+         <section id="gallery">
+            <h2>Gallery</h2>
+            <h3>Click on the buttons below to see some of my work. </h3>
+            <div class="gbutton">
+               <button id="hideShowCb">Cherry Blossoms</button>
+               <button id="hideShowSl">Snow Lights</button>
+               <button id="hideShowNice">Nice, France</button>
+            </div>
+               <div id="cb" class="grid1">
+                  <img class="reg" src="imgs/cherryblossamnight.jpg" alt="cherry blosson tree at night">
+                  <p>I took this picture right after sunset. It was taken 
+                     at Imbrie Hall Mcmennamins. I was under a lighted archway 
+                     with a view on their open green yard. I love the contrast of 
+                     the lights to the dimming blue sky and the white of the 
+                     cherry blossom petals.</p>
+               </div>
+               <div id="sl" class="grid1 imgHide">
+                  <img class="reg" src="imgs/lights_snow.jpg" alt="blue and pink lights on snow">
+                  <p>I live in Portland, OR, and when it snows it is an event.
+                     Everyone comes out to play and I went out to get some pretty pictures.
+                     I got this one outside of a music studio, the lights reflecting on the 
+                     snow was stunning! It seems like the snow itself is glowing!
+                  </p>
+               </div>
+               <div id="nice" class="grid1 imgHide">
+                  <img class="reg" src="imgs/nice_street.jpg" alt="an alley street of nice">
+                  <p>
+                     I went to Nice, France during the fall, so it rained on and off. I did not 
+                     enjoy walking in the rain too much, but after it rained there was so much potential 
+                     for reflections! As seen in this picture, you can see the yellows and oranges
+                     from the building reflecting on the street. I was also lucky to capture this
+                     when no one was around.
+                  </p>
+               </div>
+         </section>
+
+         <section id="contact">
+
+            <form id="valOnSubmit">
+               <label for="fullName">Full Name<span class="required">*</span></label>
+               <span class="message">Please enter your Full Name</span>
+               <input name="fullName" id="fullName" type="text"> 
+
+               <label for="email">Email<span class="required">*</span></label>
+               <span class="message">Please enter your email</span>
+               <input name="email" id="email" type="text">
+               
+               <label for="phone">Phone<span class="required">*</span></label>
+               <span class="message">Please enter your phone number</span>
+               <input name="phone" id="phone" type="text">
+
+               <label for="message">Message<span class="required">*</span></label>
+               <span class="message">Please add a message</span>
+               <textarea id="message"></textArea>
+
+                   <fieldset>
+                       <legend>Preferred contact method <span class="required">*</span></legend>
+                       <label for="phonepref" class="radio">
+                         <span class="radio_input">
+                           <input type="radio" name="contactpref" id="phonepref" value="Phone">
+                           <span class="radio_control"></span>
+                         </span>
+                         <span class="radio_label">Phone</span>
+                       </label>
+                       <label for="emailpref" class="radio">
+                         <span class="radio_input">
+                           <input type="radio" name="contactpref" id="emailpref" value="Email">
+                           <span class="radio_control"></span>
+                         </span>
+                         <span class="radio_label">E-Mail</span>
+                       </label>
+                         </fieldset>
+                     <span class="message">Please select a contact method</span>
+
+               <input type="submit" name="mySubmit" id="mySubmit">
+           </form>
+           <section id="success" class="hide">
+               <h4>Thank you!</h4>
+               <p>You have successfully submitted the form. Here is the information you sent us:</p>
+               <p id="formSub"></p>
+           </section>
+            
+         </section>
+
+         <section id="game">
+            <h2>game</h2>
+		      <p>Guess the correct number and win! Then click the button is you guess the correct number you get a discount of 10%!</p>
+		      <form id="formGame">
+               <label for="numInput">Enter in a number between 1 and 10</label>
+               <input type="number" name="numInput" id="numInput">
+            </form>
+            <div>
+               <p id="userNum"></p>
+		         <p id="computerNum"></p>
+		         <p id="gameContestMsg"></p>
+		         <button id="gamePlay">Play!</button>
+            </div>
+         </section>
+   </main>
+      <footer>Emily Reger</footer>
+   </body>
+</html>
